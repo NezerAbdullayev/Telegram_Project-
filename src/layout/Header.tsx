@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../../public/logo.webp";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -18,6 +19,7 @@ const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function Header() {
+  console.log({ Logo });
   const {
     anchorElNav,
     anchorElUser,
@@ -31,7 +33,7 @@ export default function Header() {
     <AppBar position="static" style={{ backgroundColor: "#3b444b" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <img src={Logo} style={{ width: "60px" }} />
           <Typography
             variant="h6"
             noWrap
